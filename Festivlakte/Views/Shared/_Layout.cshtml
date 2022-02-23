@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    @RenderBody()
     <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li> <a href="festivals.html"> Festivals </a></li>
-        <li> <a href="transport.html"> Transport </a></li>
-        <li> <a href="contact.html"> Contact </a></li>
+        <li><a class="active" href="/">Home</a></li>
+        <li> <a href="/festivals"> Festivals </a></li>
+        <li> <a href="/transport"> Transport </a></li>
+        <li> <a href="/contact"> Contact </a></li>
     </ul>
+
+    @RenderBody()
+
+    <footer>
+        <ul>
+            <li><a class="algemeneinformatie.html"> Alegemene informatie </a></li>
+        </ul>
+    </footer>
 </body>
 
-<footer>
-    <ul>
-        <li><a class="algemeneinformatie.html"> Alegemene informatie </a></li>
-    </ul>
-</footer>
 
 </html>
