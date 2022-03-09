@@ -23,7 +23,26 @@ namespace Festivlakte.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [Route("festivals")]
+        public IActionResult Festivals()
+        {
+            return View();
+        }
+
+        [Route("transport")]
+        public IActionResult Transport()
+        {
+            return View();
+        }
+
+        [Route("contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [Route("algemene-informatie")]
+        public IActionResult Algemeen ()
         {
             return View();
         }

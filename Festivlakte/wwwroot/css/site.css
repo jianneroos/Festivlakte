@@ -23,7 +23,7 @@ li a:hover {
  }
 
 body {
-    background-color: #D06FFF;
+    background-color: #d7ecfe;
 }
 .homepage1 {
 width: 200px;;
@@ -37,8 +37,11 @@ margin-left: 1000px;
 .homepage3 {
     width: 100px;
 }
+h1 {
 
-
+}
 footer {
-
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
