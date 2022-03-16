@@ -1,12 +1,38 @@
-﻿@{
+﻿@model Person
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<form>
-    Voornaam: <input type = "text" name ="voornaam"/> <br />
-    Achternaam: <input type = "text" name ="achternaam"/> <br/>
-    E-mail : <input type = "text" name ="e-mail"/> <br/>
-    Telefoonnummer: <input type = "text" name ="telefoonnummer"/> <br/>
-    Opmerkingen en/of vragen: <input type = "text" name ="vragen"/> <br/>
-    <input type = "submit" value = "Opslaan" />
+<form method = "post" class = "contactform">
+    <div class = "form-group">
+        @Html.LabelFor(m => m.Voornaam)
+        @Html.TextBoxFor(m => m.Voornaam)
+        @Html.ValidationMessageFor(m => m.Voornaam)
+    </div>
+
+    <div class = "form-group">
+        @Html.LabelFor(m => m.Achternaam)
+        @Html.TextBoxFor(m => m.Achternaam)
+        @Html.ValidationMessageFor(m => m.Achternaam)
+    </div>
+
+    <div class = "form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <div class = "form-group">
+        @Html.LabelFor(m => m.Telefoonnummer)
+        @Html.TextBoxFor(m => m.Telefoonnummer)
+        @Html.ValidationMessageFor(m => m.Telefoonnummer)
+    </div>
+
+    <div class = "form-group">
+        @Html.LabelFor(m => m. Vragen)
+        @Html.TextBoxFor(m => m.Vragen)
+        @Html.ValidationMessageFor(m => m.Vragen)
+    </div>
+
+    <input type = "submit" value = "Verstuur" />
 </form>

@@ -35,14 +35,25 @@ namespace Festivlakte.Controllers
             return View();
         }
 
-        [Route("contact")]
-        public IActionResult Contact(string voornaam, string achternaam, string email, string telefoonnummer, string vragen)
+        [Route ("contact")]
+        public IActionResult Contact()
         {
-            ViewData["voornaam"] = voornaam;
-            ViewData["achternaam"] = achternaam;
-            ViewData["email"] = email;
-            ViewData["telefoonnummer"] = telefoonnummer;
-            ViewData["vragen"] = vragen;
+            return View();
+        }
+
+        [HttpPost]
+        [Route("contact")]
+        public IActionResult Contact(Person person)
+        {
+            if (ModelState.IsValid)
+                return Redirect("/succes");
+
+            return View(person);
+        }
+
+        [Route("succes")]
+        public IActionResult Succes()
+        {
             return View();
         }
 
