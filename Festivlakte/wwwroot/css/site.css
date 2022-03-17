@@ -44,6 +44,12 @@ h1 {
 .contactform label {
     width: 100px;
 }
+
+.contactform .field-validation-error {
+    color: red;
+    margin-left: 10px;
+}
+
 footer {
     position: fixed;
     bottom: 0px;

@@ -57,7 +57,7 @@ namespace Festivlakte.Controllers
             return View();
         }
 
-        [Route("algemene-informatie")]
+        [Route("algemeen")]
         public IActionResult Algemeen ()
         {
             return View();
