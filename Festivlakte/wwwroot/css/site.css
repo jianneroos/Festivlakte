@@ -1,4 +1,4 @@
-﻿ul {
+﻿.ullayout {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -6,7 +6,11 @@
     background-color: #9C14F4;
 }
 
-li {
+.algemeenlijst {
+    
+}
+
+.layoutli {
     float: left;
 }
 
@@ -21,6 +25,10 @@ li a {
 li a:hover {
    background-color: #111;
  }
+
+.algemeenli {
+
+}
 
 body {
     background-color: #d7ecfe;
@@ -45,14 +53,19 @@ h1 {
     width: 10px;
 }
 
-.contactform .field-validation-message{
+.contactform .form-validation-message{
     color: red;
     margin-left: 30px;
 }
 
+.algemeneinfo {
+    list-style-type: none;
+    background-color: #9C14F4;
+}
+
 footer {
     position: fixed;
-
     bottom: 0px;
     left: 0px;
+    background-color: #9C14F4;
 }
