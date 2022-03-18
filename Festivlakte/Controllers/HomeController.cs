@@ -29,6 +29,12 @@ namespace Festivlakte.Controllers
             return View();
         }
 
+        [Route("detail")]
+        public IActionResult Detail()
+        {
+            return View();
+        }
+
         [Route("transport")]
         public IActionResult Transport()
         {
