@@ -1,4 +1,5 @@
-﻿@model List<string>
+﻿@using Festivlakte.Controllers.Databases
+@model List<Product>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -10,9 +11,11 @@
 <p1 style="color: #006FFF"> Hier is het altijd een feestje!</p1>
 
 <div class="text-center">
-    <h1>Alle namen!</h1>
-    @foreach(string naam in Model)
-    {
-        <p>@naam</p>
-    }
+    <h1 class="display-4"> Welcome </h1>
+    <ul>
+        @foreach(var product in Model)
+        {
+            <li>@product.Naam - @product.Prijs - @product.Beschikbaarheid</li>
+        }
+    </ul>
 </div>
