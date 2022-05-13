@@ -3,19 +3,10 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
-<img class="homepage1" src="/img/Homepage1.png" />
-<img class="homepage2" src="/img/Homepage2.png" />
-<img class="homepage3" src="/img/Homepage3.png" />
-<h1 style="color: #006FFF"> De Festivlakte </h1>
-<p1 style="color: #006FFF"> Hier is het altijd een feestje!</p1>
-
-<div class="text-center">
-    <h1 class="display-4"> Welcome </h1>
-    <ul>
-        @foreach(var product in Model)
-        {
-            <li>@product.Naam - @product.Prijs - @product.Beschikbaarheid</li>
-        }
-    </ul>
+<div class="content">
+    <img class="homepage1" src="/img/Homepage1.png" />
+    <img class="homepage2" src="/img/Homepage2.png" />
+    <img class="homepage3" src="/img/Homepage3.png" />
+    <h1 style="color: #006FFF"> De Festivlakte </h1>
+    <p1 style="color: #006FFF"> Hier is het altijd een feestje!</p1>
 </div>

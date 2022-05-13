@@ -50,18 +50,31 @@ li a:hover:not(.active) {
 body {
     background-color: #d7ecfe;
 }
+.content {
+    height:670px;
+}
+
 .homepage1 {
-    width: 200px;
-    margin-left: 1000px;
+    position: absolute;
+    width: 500px;
+    right: 150px;
+    top: 50px;
 }
 
 .homepage2 {
-    width: 300px;
+    position: absolute;
+    width: 450px;
+    left: 200px;
+    top: 250px;
 }
 
 .homepage3 {
-    width: 100px;
+    position: absolute;
+    width: 450px;
+    bottom: 200px;
+    left: 170px;
 }
+
 h1 {
 
 }
