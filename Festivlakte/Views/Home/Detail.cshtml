@@ -1,14 +1,18 @@
-﻿@{
+﻿@using Festivlakte.Controllers.Databases
+@using Festivlakte.Database
+@model Festivals
+@{
     ViewData["Title"] = "Detail";
 }
 
-<img class="beachfestival" src="/img/beachfestival.png" />
+@if(Model is null)
+{
+ <h1>Nou moe, geen festival gevonden</h1>   
+}
+else{
 
-<div>
-    <h2> Beach festival 2022!</h2>
-    <p1> Het beach festival 2022 is het grootste zomer festival van heel Nederland. <br>
-        Er komen meer dan 20 artiesten waaronder de welbekende Ronnie Flex, Lil Kleine, Bilal Wahib en nog veel meer! <br>
-        Het is het perfecte festival om samen met vrienden te genieten van het lekkere weer en de leuke muziek.<br> </p1>
-    <p2> 26-28 juli 2022 <br>
-       17:00-4:00 </p2>
-</div>
+<img class="beachfestival" src="@Model.Afbeelding" />
+
+<h1>@Model.Naam</h1>
+}
+

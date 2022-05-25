@@ -23,16 +23,20 @@ namespace Festivlakte.Controllers
 
         public IActionResult Index()
         {
-            // alle producten ophalen
-            var products = GetAllProducts();
+            // alle festivals ophalen
+            var festivals = GetAllFestivals();
 
             // lijst met producten in html stoppen
-            return View(products);
+            return View(festivals);
         }
         [Route("festivals")]
         public IActionResult Festivals()
         {
-            return View();
+            // alle festivals ophalen
+            var festivals = GetAllFestivals();
+
+            // lijst met producten in html stoppen
+            return View(festivals);
         }
 
         [Route("detail")]
@@ -81,29 +85,33 @@ namespace Festivlakte.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public List<Product> GetAllProducts ()
+        public List<Festivals> GetAllFestivals ()
         {
 
-            //alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from product");
+            //alle festivals ophalen uit de database
+            var rows = DatabaseConnector.GetRows("select * from festivals");
 
-            //lijst maken om allee producten in te stoppen
-            List<Product> products = new List<Product>();
+            //lijst maken om alle festivals in te stoppen
+            List<Festivals> festivals = new List<Festivals>();
 
             foreach (var row in rows)
             {
-                //Voor elke rij maken we nu een product
-                Product p = new Product();
+                //Voor elke rij maken we nu een festival
+                Festivals p = new Festivals();
                 p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString ();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                p.Beschrijving = row["beschrijving"].ToString ();
+                p.Datum_begin = row["datum_begin"].ToString();
+                p.Datum_eind = row["datum_eind"].ToString();
+                p.Tijd = row["tijd"].ToString();
+                p.Beschrijving_lang = row["beschrijving_lang"].ToString();
+                p.Afbeelding = row["afbeelding"].ToString();
                 p.Id = Convert.ToInt32(row["id"]);
 
-                //en dat product voegen we toe aan de lijst met producten
-                products.Add(p);
+                //en dat destival voegen we toe aan de lijst met producten
+                festivals.Add(p);
             }
 
-            return products;
+            return festivals;
         }
 
     }
