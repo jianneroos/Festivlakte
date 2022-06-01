@@ -23,12 +23,9 @@ namespace Festivlakte.Controllers
 
         public IActionResult Index()
         {
-            // alle festivals ophalen
-            var festivals = GetAllFestivals();
-
-            // lijst met producten in html stoppen
-            return View(festivals);
+            return View();
         }
+
         [Route("festivals")]
         public IActionResult Festivals()
         {
@@ -39,10 +36,11 @@ namespace Festivlakte.Controllers
             return View(festivals);
         }
 
-        [Route("detail")]
-        public IActionResult Detail()
+        [Route("festival/{id}")]
+        public IActionResult FestivalDetails(int id)
         {
-            return View();
+            var festivals = GetFestivals(id);
+            return View(festivals);
         }
 
         [Route("transport")]
@@ -107,12 +105,39 @@ namespace Festivlakte.Controllers
                 p.Afbeelding = row["afbeelding"].ToString();
                 p.Id = Convert.ToInt32(row["id"]);
 
-                //en dat destival voegen we toe aan de lijst met producten
+                //en dat festival voegen we toe aan de lijst met producten
                 festivals.Add(p);
             }
 
             return festivals;
         }
 
+        public Festivals GetFestivals(int id)
+        {
+
+            //alle festivals ophalen uit de database
+            var rows = DatabaseConnector.GetRows($"select * from festivals where id = {id}");
+
+            Festivals festivals = GetFestivalFromRow(rows[0]);
+
+
+
+            return festivals;
+        }
+
+        private Festivals GetFestivalFromRow(Dictionary<string, object> row)
+        {
+            Festivals p = new Festivals();
+            p.Naam = row["naam"].ToString();
+            p.Beschrijving = row["beschrijving"].ToString();
+            p.Datum_begin = row["datum_begin"].ToString();
+            p.Datum_eind = row["datum_eind"].ToString();
+            p.Tijd = row["tijd"].ToString();
+            p.Beschrijving_lang = row["beschrijving_lang"].ToString();
+            p.Afbeelding = row["afbeelding"].ToString();
+            p.Id = Convert.ToInt32(row["id"]);
+
+            return p;
+        }
     }
 }
