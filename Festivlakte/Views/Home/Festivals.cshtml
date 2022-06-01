@@ -8,7 +8,7 @@
     <ul>
         @foreach (var festival in Model)
        {
-        <li><a href="/festival/@festival.Id">@festival.Naam</a></li>   
+        <li><a class="festivals" href="/festival/@festival.Id">@festival.Afbeelding @festival.Naam <br> @festival.Beschrijving</a></li>   
        }
         
     </ul>

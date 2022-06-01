@@ -95,15 +95,7 @@ namespace Festivlakte.Controllers
             foreach (var row in rows)
             {
                 //Voor elke rij maken we nu een festival
-                Festivals p = new Festivals();
-                p.Naam = row["naam"].ToString();
-                p.Beschrijving = row["beschrijving"].ToString ();
-                p.Datum_begin = row["datum_begin"].ToString();
-                p.Datum_eind = row["datum_eind"].ToString();
-                p.Tijd = row["tijd"].ToString();
-                p.Beschrijving_lang = row["beschrijving_lang"].ToString();
-                p.Afbeelding = row["afbeelding"].ToString();
-                p.Id = Convert.ToInt32(row["id"]);
+                Festivals p = GetFestivalFromRow(row);
 
                 //en dat festival voegen we toe aan de lijst met producten
                 festivals.Add(p);
