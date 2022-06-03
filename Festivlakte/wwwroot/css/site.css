@@ -8,9 +8,13 @@
     color: black;
 }
 
-.algemeenlijst {
-    
-}
+    .ullayout a{
+        text-decoration:none;
+        color:#007dad;
+    }
+
+    .algemeenlijst {
+    }
 
 .balk {
     text-decoration: none;
@@ -79,7 +83,7 @@ body {
     left: 215px;
 }
 
-h1 {
+.homepagetext {
     color: #006FFF;
     position: absolute;
     right: 600px;
@@ -87,7 +91,7 @@ h1 {
     font-size: 50px;
 }
 
-p1 {
+.homepagetext2 {
     color: #006FFF;
     font-size: 25px;
     position: absolute;
