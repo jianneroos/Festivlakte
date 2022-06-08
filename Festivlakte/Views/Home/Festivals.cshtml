@@ -1,4 +1,5 @@
 ﻿@using Festivlakte.Controllers.Databases
+@using Festivlakte.Database
 @model List<Festivals>
 @{
     ViewData["Title"] = "Festivals";
@@ -8,7 +9,7 @@
     <ul>
         @foreach (var festival in Model)
        {
-        <li><a class="festivals" href="/festival/@festival.Id">@festival.Afbeelding @festival.Naam <br> @festival.Beschrijving</a></li>   
+        <li><a class="festivals" href="/festival/ @festival.Id"> src="@festival.Afbeelding" @festival.Naam <br> @festival.Beschrijving</a></li>   
        }
         
     </ul>
