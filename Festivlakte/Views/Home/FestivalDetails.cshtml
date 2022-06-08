@@ -5,11 +5,13 @@
     ViewData["Title"] = "FestivalDetails";
 }
 
-<div>
-    <h1  class="display-4">@Model.Naam</h1><br />
-    <p1>@Model.Beschrijving_lang <br />
-        @Model.Datum_begin t/m @Model.Datum_eind<br />
-        @Model.Tijd</p1>
-    <img class="beachfestival" src="@Model.Afbeelding" />
+<div class="festivalc">
+    <div><img class="afbeeldingd" src="@Model.Afbeelding" /></div>
 
+    <div style="padding-left: 60px">
+    <h2>@Model.Naam</h2><br />
+    <p>@Model.Beschrijving_lang <br />
+        @Model.Datum_begin t/m @Model.Datum_eind<br />
+        @Model.Tijd</p>
+    </div>
 </div>
