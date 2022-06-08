@@ -8,13 +8,13 @@
     color: black;
 }
 
-    .ullayout a{
-        text-decoration:none;
-        color:#007dad;
-    }
+.ullayout a{
+    text-decoration:none;
+    color:#007dad;
+}
 
-    .algemeenlijst {
-    }
+.algemeenlijst {
+}
 
 .balk {
     text-decoration: none;
@@ -34,11 +34,27 @@
 }
 
 .festivals {
-    list-style-type: none;
+    list-style: none;
     display: block;
     color: black;
     padding: 0px;
     text-decoration: none;
+    font-size: 17px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.festivals a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.afbeeldingf {
+    width: 250px;
+    height: 175px;
+    float: left;
+    margin-right: 30px;
 }
 
 li a.active {
@@ -120,12 +136,12 @@ body {
 
 .algemeneinfo {
     list-style-type: none;
+    font-size: 20px;
 }
 
-.beachfestival {
-    width: 100px;
-    height: 150px;
-    float: left;
+.algemeneinfo a {
+    text-decoration: none;
+    color: #007dad;
 }
 
 footer {
@@ -135,5 +151,4 @@ footer {
     margin: 0px;
     background-color: #d7ecfe;
     text-align:center;
-    font-size: 20px;
 }

@@ -8,9 +8,11 @@
 <div> 
     <ul>
         @foreach (var festival in Model)
-       {
-        <li><a class="festivals" href="/festival/ @festival.Id"> src="@festival.Afbeelding" @festival.Naam <br> @festival.Beschrijving</a></li>   
-       }
-        
+       {        
+            <li class="festivals">
+                <img class="afbeeldingf" src="@festival.Afbeelding" />
+                <a href="/festival/ @festival.Id"> @festival.Naam <br> @festival.Beschrijving</a>
+            </li>
+       }        
     </ul>
 </div>
