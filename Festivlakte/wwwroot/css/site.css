@@ -33,15 +33,21 @@
     margin: 0px;
 }
 
+.div1 {
+    margin: auto;
+    width: 70%;
+}
+
 .festivals {
     list-style: none;
-    display: block;
-    color: black;
-    padding: 0px;
     text-decoration: none;
-    font-size: 17px;
-    overflow: hidden;
+    display: block;
+    padding: 10px;
     margin-bottom: 30px;
+    overflow: hidden;
+    background-color: #F5F5F5;
+    color: black;
+    font-size: 17px;
 }
 
 .festivals a{
