@@ -16,9 +16,6 @@
     border-radius:8px;
 }
 
-.algemeenlijst {
-}
-
 .balk {
     text-decoration: none;
     display: block;
@@ -39,9 +36,10 @@
     left: 0;
 }
 
-.div1 {
+.divfestivals {
     margin: auto;
     width: 70%;
+    margin-bottom:70px;
 }
 
 .festivals {
@@ -53,13 +51,12 @@
     overflow: hidden;
     background-color: #F5F5F5;
     color: black;
-    font-size: 17px;
 }
 
 .festivals a{
     text-decoration: none;
     color: black;
-
+    font-size: 20px;
 }
 
 .afbeeldingf {
@@ -76,10 +73,6 @@ li a.active {
 li a:hover:not(.active) {
    background-color: #88c6fc;
    color: black;
-}
-
-.algemeenli {
-
 }
 
 body {
@@ -119,8 +112,27 @@ body {
     font-size: 50px;
 }
 
-.festivalc {
+.festivalc1 {
     display: flex;
+    background-color: #F5F5F5;
+    padding: 15px;
+    margin: auto;
+    width: 60%;
+    margin-top: 100px;
+}
+
+.festivalc2{
+    flex:1 ;
+}
+
+.afbeeldingd {
+    margin-top: 50px;
+    width: 500px;
+}
+
+.festivalc3{
+    padding-left: 60px;
+    flex:2;
 }
 
 p1 {
@@ -131,39 +143,57 @@ p1 {
     right: 600px;
 }
 
-p {
-    font-size: 20px;
-    margin-right: 400px;
-}
-
-p2 {
-    font-size: 20px;
-    display: flex;
-}
-
 h2 {
     font-size: 35px;
 }
 
-.afbeeldingd {
-    width: 500px;
-    margin-top: 35px;
-    margin-left: 300px;
-    padding-bottom: 50px;
+.transportp {
+    width: 800px;
 }
 
-.contactform label {
-    width: 200px;
-    display: inline-block;
-    padding-top: 15px;
+.transportc1 {
+    display: flex;
+    background-color: #F5F5F5;
+    padding: 15px;
+    margin: auto;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.transportc3 {
+    margin-left: 60px;
+}
+
+p2 {
+    font-size: 22px;
+}
+
+.divcontact {
+    background-color: #F5F5F5;
+    padding: 15px;
+    margin: auto;
+    width: 50%;
+    margin-top: 150px;
 }
 
 .contactform {
-    margin-left: 25px;
+    margin-left: 35px;
+}
+
+.contactform label {
+    width: 250px;
+    display: inline-block;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.contactform input{
+    width: 250px;
 }
 
 .contactform .knop {
-    margin-top: 15px;
+    margin-top: 20px;
+    width: 100px;
 }
 
 .contactform .field-validation-error {
@@ -171,8 +201,29 @@ h2 {
     margin-left: 30px;
 }
 
-.transportp {
-    width: 800px;
+.divsucces {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.algemeenc {
+    background-color: #F5F5F5;
+    padding: 15px;
+    margin: auto;
+    width: 60%;
+    margin-top:100px;
+}
+
+.algemeentitel {
+    font-size:25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.algemeenlijst {
+    font-size: 25px;
 }
 
 .algemeneinfo {
