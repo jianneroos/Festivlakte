@@ -16,5 +16,6 @@ namespace Festivlakte.Controllers.Databases
         public string? Beschrijving_lang { get; set; }
         public string? Afbeelding { get; set; }
         public string? Ticket_voorraad { get; set; }
+        public string? Prijs { get; set; }
     }
 }
