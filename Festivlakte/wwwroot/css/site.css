@@ -1,6 +1,7 @@
 ﻿.ullayout {
     list-style-type: none;
     margin: 0px;
+    margin-left: 65px;
     padding: 0px;
     overflow: hidden;
     background-color: #d7ecfe;
@@ -11,6 +12,8 @@
 .ullayout a{
     text-decoration:none;
     color:#007dad;
+    padding:15px;
+    border-radius:8px;
 }
 
 .algemeenlijst {
@@ -19,7 +22,7 @@
 .balk {
     text-decoration: none;
     display: block;
-    padding: 15px;
+    padding-top: 15px;
     margin: 30px;
     float: left;
     font-size: 25px;
@@ -28,9 +31,12 @@
 
 .logo {
     width: 150px;
-    height:120px;
+    height: 120px;
     padding: 0px;
     margin: 0px;
+    position: absolute;
+    top: 8px;
+    left: 0;
 }
 
 .div1 {
@@ -168,13 +174,16 @@ h2 {
 .algemeneinfo a {
     text-decoration: none;
     color: #007dad;
+    padding:15px;
+    border-radius:8px;
 }
 
 footer {
     position: fixed;
+    bottom: 0;
     width: 100%;
     padding: 0px;
     margin: 0px;
     background-color: #d7ecfe;
-    text-align:center;
+    text-align: center;
 }
