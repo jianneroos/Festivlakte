@@ -57,6 +57,9 @@ namespace Festivlakte.Controllers
         public IActionResult Contact(Person person)
         {
             if (ModelState.IsValid)
+
+                DatabaseConnector.SavePerson(person);
+
                 return Redirect("/succes");
 
             return View(person);

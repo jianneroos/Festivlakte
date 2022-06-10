@@ -50,5 +50,23 @@ namespace Festivlakte.Database
             return rows;
         }
 
+        public static void SavePerson(Person person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klanten(voornaam, achternaam, email, telefoonnummer, bericht)"
+                    "+ VALUES(?voornaam, ?achternaam, ?email, ?telefoonnummer, ?bericht)", conn);
+
+                // Elke parameter moet je handmatig toevoegen aan de query
+                cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.FirstName;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.LastName;
+                cmd.Parameters.Add("?email", MySqlDbType.Text).Value = person.Email;
+                cmd.Parameters.Add("?telefoonnummer", MySqlDbType.Text).Value = person.Telefoonnummer;
+                cmd.Parameters.Add("?opmerkingen", MySqlDbType.Text).Value = person.Description;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
     }
 }
