@@ -128,6 +128,7 @@ namespace Festivlakte.Controllers
             p.Beschrijving_lang = row["beschrijving_lang"].ToString();
             p.Afbeelding = row["afbeelding"].ToString();
             p.Ticket_voorraad = row["ticket_voorraad"].ToString();
+            p.Prijs = row["prijs"].ToString();
             p.Id = Convert.ToInt32(row["id"]);
 
             return p;
